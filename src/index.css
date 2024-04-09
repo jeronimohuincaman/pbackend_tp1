@@ -22,17 +22,17 @@
     justify-content: space-between;
     padding: 10px;
     border-radius: 8px;   
-    width: 300px; /* ajusta el ancho según sea necesario */
+    width: 300px;
     background-color: #CCCCCC;
 }
 .avatar {
-    width: 30px; /* ajusta el tamaño de la imagen según sea necesario */
+    width: 30px; 
     height: auto;
     padding-left: 18px;
 }
 
 .personInfo {
-    flex-grow: 1; /* Para ocupar todo el espacio disponible */
+    flex-grow: 1; 
     text-align: center;
     font-weight: bold;
 }
@@ -50,17 +50,17 @@
 }
 
 .image-button img {
-    width: 6.22px; /* ajusta el tamaño del botón según sea necesario */
+    width: 6.22px; 
     height: 20px;
     cursor: pointer;
     padding-right: 15px;
 }
 .image-button-add img {
-    width: 60px; /* Ajusta el ancho de la imagen según sea necesario */
-    height: auto; /* Esto mantendrá la proporción de la imagen */
+    width: 60px; 
+    height: auto; 
 }
 .contenedor-add{
     position: fixed;
-    bottom: 20px; /* Ajusta según sea necesario */
+    bottom: 20px; 
     right: 20px;
 }

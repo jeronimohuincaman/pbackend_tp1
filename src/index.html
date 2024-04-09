@@ -7,6 +7,8 @@
     <title>Gestion de centro educativo</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
+    <script src="addPerson.js" defer></script>
+    <link rel="stylesheet" href="addPerson.css">
 </head>
 
 <body class="body">
@@ -28,6 +30,43 @@
         <a href="#" class="image-button-add">
             <img src="./assets/add.png" alt="Botón de Imagen">
         </a>
+    </div>
+    <div class="formulario" id="formulario">
+        <h2>Crear Nuevo Usuario</h2>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="number" id="dni" name="dni" pattern="[0-9]*" inputmode="numeric" required>
+            </div>
+            <div class="form-group">
+                <label for="estadoCivil">Estado Civil:</label>
+                <select id="estadoCivil" name="estadoCivil" required>
+                    <option value="casado">Casado</option>
+                    <option value="soltero">Soltero</option>
+                    <option value="separado">Separado</option>
+                    <option value="concubinado">Concubinado</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <select id="cargo" name="cargo" required>
+                    <option value="empleado">Empleado</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="directivo">Directivo</option>
+                    <option value="personalLimpieza">Personal de Limpieza</option>
+                </select>
+            </div>
+            <button type="submit">Crear</button>
+        </form>
     </div>
 </body>
 
