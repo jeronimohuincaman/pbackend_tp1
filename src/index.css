@@ -1,0 +1,66 @@
+.body{
+    background-color: white;
+    margin: 0;
+}
+.navbar{
+    background-color: #0F4C81;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: auto;
+}
+
+.titleNav{
+    color: white;
+    margin: 0;
+}
+
+.cardPerson {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;   
+    width: 300px; /* ajusta el ancho según sea necesario */
+    background-color: #CCCCCC;
+}
+.avatar {
+    width: 30px; /* ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    padding-left: 18px;
+}
+
+.personInfo {
+    flex-grow: 1; /* Para ocupar todo el espacio disponible */
+    text-align: center;
+    font-weight: bold;
+}
+
+.namePersona {
+    color: #0F4C81;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.cargoPersona {   
+    color: white;
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.image-button img {
+    width: 6.22px; /* ajusta el tamaño del botón según sea necesario */
+    height: 20px;
+    cursor: pointer;
+    padding-right: 15px;
+}
+.image-button-add img {
+    width: 60px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Esto mantendrá la proporción de la imagen */
+}
+.contenedor-add{
+    position: fixed;
+    bottom: 20px; /* Ajusta según sea necesario */
+    right: 20px;
+}
