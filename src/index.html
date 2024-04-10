@@ -8,7 +8,6 @@
     <link rel='stylesheet' href='index.css'>
     <script src='index.js'></script>
     <script src='addPerson.js' defer></script>
-    <link rel='stylesheet' href='addPerson.css'>
 </head>
 
 <body class='body'>
@@ -16,7 +15,7 @@
         <h1 class='titleNav'>Gestion de Centro Educativo</h1>
     </header>
     <br>
-    <div class='cardPerson'>
+    <!-- <div class='cardPerson'>
         <img src='./assets/Person.png' alt='' class='avatar'>
         <div class='personInfo'>
             <h1 class='namePersona'>Lucas Di Luca</h1>
@@ -25,13 +24,20 @@
         <a href='#' class='image-button'>
             <img src='./assets/options.png' alt='Botón de Imagen'>
         </a>
-    </div>
+    </div> -->
     <div class='contenedor-add'>
-        <a href='#' class='image-button-add'>
+        <a href='#' class='image-button-add' id="addButton">
             <img src='./assets/add.png' alt='Botón de Imagen'>
         </a>
     </div>
-    <div class='formulario' id='formulario'>
+    <div class="selectCargo" style="display: none;">
+        <select class="form-group" id="tipo_persona">
+            <option value="estudiante">Estudiante</option>
+            <option value="profesor">Profesor</option>
+            <option value="personalServicio">Personal de servicio</option>
+        </select>
+    </div>
+    <div class='formulario' id='formulario' style="display: none;">
         <h2>CARGAR</h2>
         <form>
             <div class='form-group'>
@@ -102,13 +108,23 @@
                 <label for='sindicato'>Sindicato</label>
                 <input type='text' id='sindicato' name='sindicato' required>
             </div>
+
+            <!-- <div class="form-group">
+                <label for="">Estado empleado: </label>
+                <input type="radio" id="activo" name="estado" value="activo" checked>
+                <label for="activo">Activo</label>
+
+                <input type="radio" id="noActivo" name="estado" value="no activo">
+                <label for="noActivo">No Activo</label>
+            </div> -->
+
             <div class='form-group'>
-                <label for='estado_empleado'>Estado empleado: </label>
-                <input type='radio' id='estado_emplado' name='estado_emplado' required>
+                <label for='materias'>Materias</label>
+                <input type='text' id='materias' name='materias' required>
             </div>
             <div class='form-group'>
-                <label for=''></label>
-                <input type='' id='' name='' required>
+                <label for='grado_academico'>Grado Academico:</label>
+                <input type='text' id='grado_academico' name='grado_academico' required>
             </div>
             <div class='form-group'>
                 <label for='curso-matriculado'>Curso matriculado:</label>
@@ -119,19 +135,11 @@
                 <input type='text' name='departamento' id='departamento'>
             </div>
             <div class='form-group'>
-                <label for="sec-asignada">Sección Asignada: </label>
+                <label for="seccion_asignada">Sección Asignada: </label>
                 <input type="text" name='seccion_asignada' id='seccion_asignada'>
             </div>
             <button type='submit'>Crear</button>
         </form>
-    </div>
-
-    <div class='selectCargo'>
-        <select class='form-group' id='tipo_persona'>
-            <option value='estudiante'>Estudiante</option>
-            <option value='profesor'>Profesor</option>
-            <option value='personalServicio'>Personal de servicio</option>
-        </select>
     </div>
 </body>
 
