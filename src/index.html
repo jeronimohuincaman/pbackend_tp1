@@ -1,72 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Gestion de centro educativo</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-    <script src="addPerson.js" defer></script>
-    <link rel="stylesheet" href="addPerson.css">
+    <link rel='stylesheet' href='index.css'>
+    <script src='index.js'></script>
+    <script src='addPerson.js' defer></script>
+    <link rel='stylesheet' href='addPerson.css'>
 </head>
 
-<body class="body">
-    <header class="navbar">
+<body class='body'>
+    <header class='navbar'>
         <h1 class='titleNav'>Gestion de Centro Educativo</h1>
     </header>
     <br>
-    <div class="cardPerson">
-        <img src="./assets/Person.png" alt="" class="avatar">
-        <div class="personInfo">
+    <div class='cardPerson'>
+        <img src='./assets/Person.png' alt='' class='avatar'>
+        <div class='personInfo'>
             <h1 class='namePersona'>Lucas Di Luca</h1>
             <h2 class='cargoPersona'>Estudiante</h2>
         </div>
-        <a href="#" class="image-button">
-            <img src="./assets/options.png" alt="Botón de Imagen">
+        <a href='#' class='image-button'>
+            <img src='./assets/options.png' alt='Botón de Imagen'>
         </a>
     </div>
-    <div class="contenedor-add">
-        <a href="#" class="image-button-add">
-            <img src="./assets/add.png" alt="Botón de Imagen">
+    <div class='contenedor-add'>
+        <a href='#' class='image-button-add'>
+            <img src='./assets/add.png' alt='Botón de Imagen'>
         </a>
     </div>
-    <div class="formulario" id="formulario">
-        <h2>Crear Nuevo Usuario</h2>
+    <div class='formulario' id='formulario'>
+        <h2>CARGAR</h2>
         <form>
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <div class='form-group'>
+                <label for='nombre'>Nombre:</label>
+                <input type='text' id='nombre' name='nombre' required>
             </div>
-            <div class="form-group">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
+            <div class='form-group'>
+                <label for='apellido'>Apellido:</label>
+                <input type='text' id='apellido' name='apellido' required>
             </div>
-            <div class="form-group">
-                <label for="dni">DNI:</label>
-                <input type="number" id="dni" name="dni" pattern="[0-9]*" inputmode="numeric" required>
+            <div class='form-group'>
+                <label for='dni'>DNI:</label>
+                <input type='number' id='dni' name='dni' pattern='[0-9]*' inputmode='numeric' required>
             </div>
-            <div class="form-group">
-                <label for="estadoCivil">Estado Civil:</label>
-                <select id="estadoCivil" name="estadoCivil" required>
-                    <option value="casado">Casado</option>
-                    <option value="soltero">Soltero</option>
-                    <option value="separado">Separado</option>
-                    <option value="concubinado">Concubinado</option>
-                    <option value="otro">Otro</option>
+            <div class='form-group'>
+                <label for='edad'>Edad:</label>
+                <input type='number' id='edad' name='edad' required>
+            </div>
+            <div class='form-group'>
+                <label for='numero_telefono'>Numero de telefono:</label>
+                <input type='number' id='numero_telefono' name='numero_telefono' required>
+            </div>
+            <div class='form-group'>
+                <label for='fecha_nacimiento'>Fecha Nacimiento:</label>
+                <input type='date' id='fecha_nacimiento' name='fecha_nacimiento' required>
+            </div>
+            <div class='form-group'>
+                <label for='direccion'>Direccion:</label>
+                <input type='text' id='direccion' name='direccion' required>
+            </div>
+            <div class='form-group'>
+                <label for='correo_electronico'>Correo Electronico:</label>
+                <input type='email' id='correo_electronico' name='correo_electronico' required>
+            </div>
+            <div class='form-group'>
+                <label for='carrera'>Carrera:</label>
+                <input type='text' id='carrera' name='carrera' required>
+            </div>
+            <div class='form-group'>
+                <label for='clases'>Clases:</label>
+                <input type='text' id='clases' name='clases' required>
+            </div>
+
+            <div class='form-group'>
+                <label for='estadoCivil'>Estado Civil:</label>
+                <select id='estado_civil' name='estadoCivil' required>
+                    <option value='casado'>Casado</option>
+                    <option value='soltero'>Soltero</option>
+                    <option value='separado'>Separado</option>
+                    <option value='concubinado'>Concubinado</option>
+                    <option value='otro'>Otro</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="cargo">Cargo:</label>
-                <select id="cargo" name="cargo" required>
-                    <option value="empleado">Empleado</option>
-                    <option value="estudiante">Estudiante</option>
-                    <option value="directivo">Directivo</option>
-                    <option value="personalLimpieza">Personal de Limpieza</option>
-                </select>
+            <div class='form-group'>
+                <label for='año-incorporacion'>Año Incorporación:</label>
+                <input type='date' id='año_incorporacion' name='año-incorporacion' required>
             </div>
-            <button type="submit">Crear</button>
+            <div class='form-group'>
+                <label for='num-despacho'>Numero de despacho:</label>
+                <input type='number' id='num-despacho' name='numero_despacho' pattern='[0-9]' inputmode='numeric'
+                    required>
+            </div>
+            <div class='form-group'>
+                <label for='salario'>Salario:</label>
+                <input type='number' id='salario' name='salario' required>
+            </div>
+            <div class='form-group'>
+                <label for='sindicato'>Sindicato</label>
+                <input type='text' id='sindicato' name='sindicato' required>
+            </div>
+            <div class='form-group'>
+                <label for='estado_empleado'>Estado empleado: </label>
+                <input type='radio' id='estado_emplado' name='estado_emplado' required>
+            </div>
+            <div class='form-group'>
+                <label for=''></label>
+                <input type='' id='' name='' required>
+            </div>
+            <div class='form-group'>
+                <label for='curso-matriculado'>Curso matriculado:</label>
+                <input type='text' name='curso_matriculado' id='curso_matriculado' inputmode='numeric' required>
+            </div>
+            <div class='form-group'>
+                <label for='departamento'>Departamento:</label>
+                <input type='text' name='departamento' id='departamento'>
+            </div>
+            <div class='form-group'>
+                <label for="sec-asignada">Sección Asignada: </label>
+                <input type="text" name='seccion_asignada' id='seccion_asignada'>
+            </div>
+            <button type='submit'>Crear</button>
         </form>
+    </div>
+
+    <div class='selectCargo'>
+        <select class='form-group' id='tipo_persona'>
+            <option value='estudiante'>Estudiante</option>
+            <option value='profesor'>Profesor</option>
+            <option value='personalServicio'>Personal de servicio</option>
+        </select>
     </div>
 </body>
 
