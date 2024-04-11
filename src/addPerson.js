@@ -9,10 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // Selecciona el formulario mediante su ID y lo asigna a la variable formulario.
     const formulario = document.getElementById('formulario-container');
 
+    const titulo_container = document.getElementById('titulo_container');
+    const titulo = document.createElement("h2");
+    titulo.innerHTML = "Seleccione Tipo de Persona";
+    titulo_container.appendChild(titulo);
+
+
     // Agrega un evento de escucha al botón de agregar que se activa cuando se hace clic en él.
     addButton.addEventListener('click', function () {
         // Esta linea se encarga de cambiar el estilo de display 'none' a display 'block'.
         selectCargoDiv.style.display = 'block';
+        titulo_container.style.display = 'block';
     });
 
     // Agrega un evento de escucha al select que se activa cuando cambia su valor.
@@ -63,26 +70,51 @@ document.addEventListener('DOMContentLoaded', function () {
             'estado_civil',
             'carrera',
             'curso_matriculado',
-            'clases'
+            'clases',
+            'boton',
+            'titulo'
         ];
 
+        const form = document.createElement('form');
+        form.classList.add('form-group');
+        form.id = 'form';
+
         fields.forEach(field => {
-            const label = document.createElement('label');
-            label.textContent = capitalizeFirstLetter(field) + ':';
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.id = field;
-            input.name = field;
-            input.required = true;
-            const div = document.createElement('div');
-            div.classList.add('form-group');
-            div.appendChild(label);
-            div.appendChild(input);
-            formulario.appendChild(div);
+            const div_form = document.createElement('div');
+            div_form.classList.add('container-form-control');
+
+
+            if (field === 'boton') {
+                const button = document.createElement('button');
+                button.innerHTML = 'Guardar';
+                button.id = `${field}-estudiante`;
+                button.type = 'submit';
+                div_form.appendChild(button);
+            } else if (field === 'titulo') {
+                titulo.innerText = 'Crear Estudiante';
+            } else {
+                const label = document.createElement('label');
+                label.textContent = capitalizeFirstLetter(field) + ':';
+                const input = document.createElement('input');
+                if (field != 'dni' | 'numero_telefono' | 'edad' | 'salario') {
+                    input.type = 'text';
+                } else {
+                    input.type = 'number';
+                }
+                input.id = field;
+                input.name = field;
+                input.required = true;
+                input.classList.add('form-control');
+                div_form.appendChild(label);
+                div_form.appendChild(input);
+            }
+            form.appendChild(div_form);
         });
+        formulario.appendChild(form);
     }
 
     function mostrarFormularioProfesor() {
+        let tiulo = 'Crear Profesor';
         const fields = [
             'nombre',
             'apellido',
@@ -102,7 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'grado_academico',
             'clases',
             'departamento',
-            'boton'
+            'boton',
+            'titulo'
         ];
 
         const form = document.createElement('form');
@@ -120,6 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 button.id = `${field}-profesor`;
                 button.type = 'submit';
                 div_form.appendChild(button);
+            } else if (field === 'titulo') {
+                titulo.innerText = 'Crear Profesor';
             } else {
                 const label = document.createElement('label');
                 label.textContent = capitalizeFirstLetter(field) + ':';
@@ -158,23 +193,47 @@ document.addEventListener('DOMContentLoaded', function () {
             'anio_incorporacion',
             'turno',
             'cargo',
-            'seccion_asignada'
+            'seccion_asignada',
+            'boton',
+            'titulo'
         ];
 
+        const form = document.createElement('form');
+        form.classList.add('form-group');
+        form.id = 'form';
+
         fields.forEach(field => {
-            const label = document.createElement('label');
-            label.textContent = capitalizeFirstLetter(field) + ':';
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.id = field;
-            input.name = field;
-            input.required = true;
-            const div = document.createElement('div');
-            div.classList.add('form-group');
-            div.appendChild(label);
-            div.appendChild(input);
-            formulario.appendChild(div);
+            const div_form = document.createElement('div');
+            div_form.classList.add('container-form-control');
+
+
+            if (field === 'boton') {
+                const button = document.createElement('button');
+                button.innerHTML = 'Guardar';
+                button.id = `${field}-auxiliar`;
+                button.type = 'submit';
+                div_form.appendChild(button);
+            } else if (field === 'titulo') {
+                titulo.innerText = 'Crear Auxiliar de servicio';
+            } else {
+                const label = document.createElement('label');
+                label.textContent = capitalizeFirstLetter(field) + ':';
+                const input = document.createElement('input');
+                if (field != 'dni' | 'numero_telefono' | 'edad' | 'salario') {
+                    input.type = 'text';
+                } else {
+                    input.type = 'number';
+                }
+                input.id = field;
+                input.name = field;
+                input.required = true;
+                input.classList.add('form-control');
+                div_form.appendChild(label);
+                div_form.appendChild(input);
+            }
+            form.appendChild(div_form);
         });
+        formulario.appendChild(form);
     }
 
     function capitalizeFirstLetter(string) {
