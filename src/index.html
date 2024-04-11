@@ -6,7 +6,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Gestion de centro educativo</title>
     <link rel='stylesheet' href='index.css'>
-    <script src='index.js'></script>
+    <script type="module" src='index.js'></script>
     <script src='addPerson.js' defer></script>
 </head>
 
@@ -38,8 +38,11 @@
             <option value="personalServicio">Personal de servicio</option>
         </select>
     </div>
-    <div class='formulario' id='formulario' style="display: none;">
+    <div id='formulario-container' class="formulario-container" style="display: none;">
         <h2>CARGAR</h2>
+        <form id='formulario'>
+
+        </form>
     </div>
     <div id='contenedor-cards'>
         <!-- Aca se agregan las cards -->

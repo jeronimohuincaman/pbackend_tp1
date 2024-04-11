@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Selecciona el elemento select mediante su ID y lo asigna a la variable selectPersona.
     const selectPersona = document.getElementById('tipo_persona');
     // Selecciona el formulario mediante su ID y lo asigna a la variable formulario.
-    const formulario = document.getElementById('formulario');
+    const formulario = document.getElementById('formulario-container');
 
     // Agrega un evento de escucha al botón de agregar que se activa cuando se hace clic en él.
     addButton.addEventListener('click', function () {
@@ -111,23 +111,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
         fields.forEach(field => {
             const div_form = document.createElement('div');
-            div_form.classList.add('form-control');
+            div_form.classList.add('container-form-control');
 
 
             if (field === 'boton') {
                 const button = document.createElement('button');
                 button.innerHTML = 'Guardar';
-                button.id = field;
+                button.id = `${field}-profesor`;
                 button.type = 'submit';
                 div_form.appendChild(button);
             } else {
                 const label = document.createElement('label');
                 label.textContent = capitalizeFirstLetter(field) + ':';
                 const input = document.createElement('input');
-                input.type = 'text';
+                if (field != 'dni' | 'numero_telefono' | 'edad' | 'salario') {
+                    input.type = 'text';
+                } else {
+                    input.type = 'number';
+                }
                 input.id = field;
                 input.name = field;
                 input.required = true;
+                input.classList.add('form-control');
                 div_form.appendChild(label);
                 div_form.appendChild(input);
             }
