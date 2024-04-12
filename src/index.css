@@ -1,6 +1,7 @@
 .body{
     background-color: white;
     margin: 0;
+
 }
 .navbar{
     background-color: #0F4C81;
@@ -129,3 +130,42 @@ button:hover {
 }
 /* ------------------- Fin estilos formulario ------------------- */
 
+/* Ventanas POP UP */
+
+.popup {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    /* display: none; */
+    border: 1px solid #000;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.popup p {
+    margin: 0;
+    color: #0F4C81;
+}
+
+.success {
+    background-color: white;
+}
+  
+.modified {
+    background-color: white;
+}
+  
+.error {
+    background-color: white;
+}
