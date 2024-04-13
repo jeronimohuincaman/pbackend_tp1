@@ -3,9 +3,6 @@ import { Empleado } from "./Empleado.js";
 export class AuxiliarDeServicio extends Empleado {
     constructor({nombre, apellido, dni, numero_telefono, direccion, correo_electronico, edad, fecha_nacimiento, estado_civil, salario, sindicato, estado_empleado, anio_incorporacion, turno, cargo, seccion_asignada}) {
         super(nombre, apellido, dni, numero_telefono, direccion, correo_electronico, edad, fecha_nacimiento, estado_civil, salario, sindicato, estado_empleado, anio_incorporacion)
-        this.seccion_asignada = seccion_asignada;
-        this.turno = turno;
-        this.cargo = cargo;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -19,6 +16,9 @@ export class AuxiliarDeServicio extends Empleado {
         this.sindicato = sindicato;
         this.estado_empleado = estado_empleado;
         this.anio_incorporacion = anio_incorporacion;
+        this.turno = turno;
+        this.cargo = cargo;
+        this.seccion_asignada = seccion_asignada;
     }
     addTurno() { }
     removeTurno() { }
