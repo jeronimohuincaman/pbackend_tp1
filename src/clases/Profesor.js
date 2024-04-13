@@ -42,6 +42,7 @@ export class Profesor extends Empleado {
         this.salario = salario;
         this.anio_incorporacion = anio_incorporacion;
         this.estado_civil = estado_civil;
+        this.tipo = 'Profesor'
     }
 
     addClase() { }

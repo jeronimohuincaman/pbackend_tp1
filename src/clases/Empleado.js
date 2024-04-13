@@ -32,7 +32,7 @@ export class Empleado extends Persona {
         this.correo_electronico = correo_electronico
         this.edad = edad
         this.fecha_nacimiento = fecha_nacimiento
-        this.estado_civil = estado_civil
+        this.estado_civil = estado_civil;
     }
 
     cambiarSalario(nuevo_salario) { }

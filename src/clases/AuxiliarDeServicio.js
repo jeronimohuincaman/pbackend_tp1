@@ -19,6 +19,7 @@ export class AuxiliarDeServicio extends Empleado {
         this.turno = turno;
         this.cargo = cargo;
         this.seccion_asignada = seccion_asignada;
+        this.tipo = 'Auxiliar de servicio';
     }
     addTurno() { }
     removeTurno() { }

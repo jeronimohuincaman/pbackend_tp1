@@ -31,6 +31,7 @@ export class Estudiante extends Persona {
         this.edad = edad;
         this.fecha_nacimiento = fecha_nacimiento;
         this.estado_civil = estado_civil;
+        this.tipo = 'Estudiante';
     }
 
     cambiarCarrera(nombre_nueva_carrera) { }

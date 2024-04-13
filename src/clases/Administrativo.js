@@ -18,6 +18,7 @@ export class Administrativo extends Empleado {
         this.anio_incorporacion = anio_incorporacion;
         this.cargo = cargo;
         this.horarios = horarios;
+        this.tipo = 'Administrativo';
     }
 
     addHorario() { }

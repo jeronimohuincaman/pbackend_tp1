@@ -60,6 +60,7 @@ function obtenerValoresFormulario(formulario) {
 }
 
 function AgregarProfesor(values) {
+    const contenedor_cards = document.getElementById('contenedor-cards');
     const profesor = {};
 
     values.forEach(item => {
@@ -72,9 +73,12 @@ function AgregarProfesor(values) {
     let profe = new Profesor(profesor);
     Personas.push(profe);
 
+    const card = dibujarCard(profe);
+    contenedor_cards.innerHTML += card;
 }
 
 function AgregarEstudiante(values) {
+    const contenedor_cards = document.getElementById('contenedor-cards');
     const alumno = {};
 
     values.forEach(item => {
@@ -87,11 +91,13 @@ function AgregarEstudiante(values) {
     let estudiante = new Estudiante(alumno);
     Personas.push(estudiante);
 
+    const card = dibujarCard(estudiante);
+    contenedor_cards.innerHTML += card;
 }
 
 function AgregarAdministrativo(values) {
+    const contenedor_cards = document.getElementById('contenedor-cards');
     const admins = {};
-
     values.forEach(item => {
         let clave = Object.keys(item)[0];
         let valor = item[clave];
@@ -101,10 +107,12 @@ function AgregarAdministrativo(values) {
 
     let administrativo = new Administrativo(admins);
     Personas.push(administrativo);
-    ;
+    const card = dibujarCard(administrativo);
+    contenedor_cards.innerHTML += card;
 }
 
 function AgregarAuxiliar(values) {
+    const contenedor_cards = document.getElementById('contenedor-cards');
     const auxiliar_servicio = {};
 
     values.forEach(item => {
@@ -117,9 +125,12 @@ function AgregarAuxiliar(values) {
     let auxiliar = new AuxiliarDeServicio(auxiliar_servicio);
     Personas.push(auxiliar);
 
+    const card = dibujarCard(auxiliar);
+    contenedor_cards.innerHTML += card;
 }
 
 function AgregarDirectivo(values) {
+    const contenedor_cards = document.getElementById('contenedor-cards');
     const directivo = {};
 
     values.forEach(item => {
@@ -132,4 +143,22 @@ function AgregarDirectivo(values) {
     let dire = new Directivo(directivo);
     Personas.push(dire);
 
+    const card = dibujarCard(dire);
+    contenedor_cards.innerHTML += card;
+}
+
+function dibujarCard(persona) {
+    const card = `    
+        <div class='cardPerson'>
+            <img src='./assets/Person.png' alt='' class='avatar'>
+                <div class='personInfo'>
+                    <h1 class='namePersona'>${persona.nombre}</h1>
+                    <h2 class='cargoPersona'>${persona.tipo}</h2>
+                </div>
+            <a href='#' class='image-button'>
+                <img src='./assets/options.png' alt='Botón de Imagen'>
+            </a>
+        </div>
+        `;
+        return card;
 }
