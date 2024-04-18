@@ -152,7 +152,7 @@ function dibujarCard(persona) {
         <div class='cardPerson'>
             <img src='./assets/Person.png' alt='' class='avatar'>
                 <div class='personInfo'>
-                    <h1 class='namePersona'>${persona.nombre}</h1>
+                    <h1 class='namePersona'>${persona.nombre} ${persona.apellido}</h1>
                     <h2 class='cargoPersona'>${persona.tipo}</h2>
                 </div>
             <a href='#' class='image-button'>
