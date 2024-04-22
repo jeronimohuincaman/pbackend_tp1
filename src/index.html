@@ -14,8 +14,39 @@
     <header class='navbar'>
         <h1 class='titleNav'>Gestion de Centro Educativo</h1>
     </header>
-    <br>
-    <div class='cardPerson'>
+    <div class="contenedor-principal">
+        <div class="conteiner-izq">
+            <div id="titulo_container" style="display: none;"></div>
+
+            <div class="selectCargo" style="display: none;">
+                <select class="form-group" id="tipo_persona">
+                    <option value="">...</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="profesor">Profesor</option>
+                    <option value="personalServicio">Personal de servicio</option>
+                    <option value="administrativo">Administrativo</option>
+                    <option value="directivo">Directivo</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div id='formulario-container' class="formulario-container" style="display: none;">
+            <h2>CARGAR</h2>
+            <form id='formulario'></form>
+        </div>
+
+            <div id='contenedor-cards'>
+                <!-- Aca se agregan las cards -->
+            </div>
+            <div class='contenedor-add'>
+                <a href='#' class='image-button-add' id="addButton">
+                    <img src='./assets/add.png' alt='Botón de Imagen'>
+                </a>
+            </div>
+            
+    </div>
+    <!-- <div class='cardPerson'>
         <img src='./assets/Person.png' alt='' class='avatar'>
         <div class='personInfo'>
             <h1 class='namePersona'>nombreDeFormulario</h1>
@@ -24,33 +55,8 @@
         <a href='#' class='image-button'>
             <img src='./assets/options.png' alt='Botón de Imagen'>
         </a>
-    </div>
-    <div id="titulo_container" style="display: none;"></div>
-    <div class='contenedor-add'>
-        <a href='#' class='image-button-add' id="addButton">
-            <img src='./assets/add.png' alt='Botón de Imagen'>
-        </a>
-    </div>
-    <div class="selectCargo" style="display: none;">
-        <select class="form-group" id="tipo_persona">
-            <option value="">...</option>
-            <option value="estudiante">Estudiante</option>
-            <option value="profesor">Profesor</option>
-            <option value="personalServicio">Personal de servicio</option>
-            <option value="administrativo">Administrativo</option>
-            <option value="directivo">Directivo</option>
-        </select>
-    </div>
-    <div id='formulario-container' class="formulario-container" style="display: none;">
-        <h2>CARGAR</h2>
-        <form id='formulario'>
-
-        </form>
-    </div>
-    <div id='contenedor-cards'>
-        <!-- Aca se agregan las cards -->
-    </div>
-
+    </div> -->
+    
 </body>
 
 </html>
